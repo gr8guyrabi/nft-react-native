@@ -18,7 +18,7 @@ export const EthPrice = () => {
 export const ImageCmp = ({ imgUrl, index }) => {
     return (
         <Image
-            keyExtractor={index}
+            key={index}
             source={imgUrl}
             resizeMode="contain"
             style={{ 
