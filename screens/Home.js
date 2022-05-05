@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import { View, SafeAreaView, FlatList, Text } from 'react-native'
+import { View, FlatList, Text } from 'react-native'
 
 import { COLORS, NFTData } from '../constants'
-import { HomeHeader, FocusedStatusBar, NFTCard  } from '../components'
+import { HomeHeader, FocusedStatusBar, NFTCard, RectButton  } from '../components'
 
 const Home = () => {
     return (
-        <SafeAreaView style={{ flex: 1 }}>
-            <FocusedStatusBar background={COLORS.primary} />
+        <View style={{ flex: 1 }}>
+            <FocusedStatusBar backgroundColor='purple' />
             <View style={{ flex: 1 }}>
-                <View style={{zIndex: 0}}>
-                    <FlatList data={NFTData}
+                <View style={{ zIndex: 0 }}>
+                    <FlatList 
+                        data={NFTData}
                         renderItem={({ item }) => <NFTCard data={item} />}
                         keyExtractor={(item) => item.id}
                         showsVerticalScrollIndicator={false}
@@ -30,7 +31,7 @@ const Home = () => {
                     <View style={{ flex: 1, backgroundColor: COLORS.white }}></View>
                 </View>
             </View>
-        </SafeAreaView>
+        </View>
     )
 }
 
