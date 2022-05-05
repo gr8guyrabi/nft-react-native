@@ -53,7 +53,7 @@ const Details = ({ route, navigation }) => {
             </View>
             <FlatList 
                 data={data.bids}
-                renderItem={({ item }) => <DetailsBid bit={item} />}
+                renderItem={({ item }) => <DetailsBid bid={item} />}
                 keyExtractor={(item) => item.id}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: SIZES.extraLarge * 3 }}
@@ -74,7 +74,7 @@ const Details = ({ route, navigation }) => {
                                     fontFamily: SIZES.semiBold,
                                     color: COLORS.primary
                                 }}>
-                                    Current Bid
+                                    Current Bids
                                 </Text>
                             )}
                         </View>
